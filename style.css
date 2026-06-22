@@ -130,7 +130,7 @@ body {
 .rsvp {
   position: relative;
   overflow: hidden;
-  color: white;
+  color: #e6dddd;
   font-family: "Cormorant Garamond", "Noto Serif TC", serif;
 }
 
@@ -188,11 +188,13 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: 1.2s ease;
+  
 }
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
   color: rgb(114, 105, 57);
+  
 }
 
 /* 🎞 REVEAL 影片區 (全域/電腦預設完整) */
