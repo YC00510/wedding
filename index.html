@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Wedding Invitation</title>
+
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- 🎵 MUSIC -->
+<audio id="bgm" autoplay loop>
+  <source src="https://files.catbox.moe/t7ehso.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-btn" id="musicBtn">
+  <img src="https://files.catbox.moe/tu4c5v.png" alt="Music" />
+</div>
+
+<!-- ✉️ OPENING -->
+<div class="opening" id="opening">
+<p>點一下 開啟信封</p>
+  <button class="envelope-btn" id="enterBtn">
+
+    <img
+      src="https://files.catbox.moe/28kvny.png"
+      alt="Open Invitation"
+      class="envelope-image"
+    >
+
+    <div class="invite-text">
+      OPEN INVITATION
+      
+    </div>
+
+  </button>
+
+</div>
+<!-- 🎬 HERO -->
+<section class="hero">
+
+  <video
+    class="hero-video" autoplay  muted  loop  playsinline
+  >
+    <source src="https://files.catbox.moe/46q89y.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+<div class="hero-content">
+  
+  </div>
+  
+
+</section>
+
+<!-- INVITE -->
+<section class="section reveal">
+  <h2>Invitation</h2>
+  <p>誠摯邀請您參與我們的重要時刻</p>
+</section>
+
+<!-- INFO -->
+<section class="card reveal">
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="https://files.catbox.moe/ug6dqu.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>    WE ARE GETTING ENGAGED</h1>
+    <h2>PING & YUCHI</h2>
+  </div>
+  <br></br>
+  <br></br>
+  <br></br>
+  <h2>Wedding Details</h2>
+  <p>日期: 2026.12.12</p>
+  <p>時間: 11:30</p>
+  <p>地點:餐廳</p>
+</section>
+
+
+
+
+
+
+<!-- RSVP -->
+<section class="card reveal rsvp">
+  <div class="click-layer" onclick="window.open('https://forms.google.com')"></div>
+邀請您填寫表單，<br></br>
+讓我們知道您是否能夠參加這個特別的日子!
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <a class="btn">💌 點我進入表單</a>
+</section>
+
+<section class="section reveal">
+  <h2>Our Journey</h2>
+  <p>Every moment leads us here.</p>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery reveal">
+  <img src="https://files.catbox.moe/8ucxa3.JPG"/>
+  <img src="https://files.catbox.moe/8ucxa3.JPG"/>
+  <img src="https://files.catbox.moe/8ucxa3.JPG"/>
+</section>
+
+
+
+<footer class="reveal">
+  Thank you for being part of our story
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
