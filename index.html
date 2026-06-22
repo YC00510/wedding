@@ -1,92 +1,78 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wedding Invitation</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Wedding Invitation</title>
 
-  <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-<!-- 🎵 音樂 -->
-<audio id="bgm" loop>
+<!-- 🎵 MUSIC -->
+<audio id="bgm" autoplay loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button id="musicBtn">🔈 Music</button>
+<div class="music-btn" id="musicBtn">♫</div>
 
-<!-- HERO -->
-<section class="hero parallax">
+<!-- ✉️ OPENING -->
+<div class="opening" id="opening">
+  <div class="envelope"></div>
+  <h1>YOU ARE INVITED</h1>
+</div>
+
+<!-- 🎬 HERO -->
+<section class="hero">
   <div class="overlay"></div>
 
-  <div class="hero-content fade">
+  <div class="hero-content reveal">
     <h1>WE ARE GETTING MARRIED</h1>
-    <h2>PING ＆ YUCHI</h2>
+    <h2>Ping & Yuchi</h2>
     <p>2027.03.20</p>
-
-    <div class="scroll">↓ Scroll</div>
   </div>
 </section>
 
 <!-- INVITE -->
-<section class="section fade">
+<section class="section reveal">
   <h2>Invitation</h2>
-  <p>
-    誠摯邀請您參與我們的婚禮，<br/>
-    一起見證這段重要的人生旅程。
-  </p>
+  <p>誠摯邀請您參與我們的重要時刻</p>
 </section>
 
 <!-- INFO -->
-<section class="section card fade">
+<section class="card reveal">
   <h2>Wedding Details</h2>
-
-  <p><b>Date:</b> 2026.12.12</p>
-  <p><b>Time:</b> 12:00</p>
-  <p><b>Venue:</b> 餐廳</p>
-
-  <a class="btn" href="https://maps.google.com" target="_blank">
-    View Location
-  </a>
+  <p>Date: 2027.03.20</p>
+  <p>Time: 11:30</p>
+  <p>Venue: ○○會館</p>
 </section>
 
-<!-- STORY PARALLAX -->
-<section class="parallax section story">
-  <div class="overlay"></div>
-  <div class="fade">
-    <h2>Our Journey</h2>
-    <p>從相遇到現在，每一步都很重要。</p>
-  </div>
+<!-- CINEMA STORY -->
+<section class="cinema reveal"></section>
+
+<section class="section reveal">
+  <h2>Our Journey</h2>
+  <p>Every moment leads us here.</p>
 </section>
 
 <!-- GALLERY -->
-<section class="section fade">
-  <h2>Gallery</h2>
-
-  <div class="gallery">
-    <img src="https://files.catbox.moe/8ucxa3.JPG"/>
-    <img src="https://files.catbox.moe/8ucxa3.JPG"/>
-    <img src="https://files.catbox.moe/8ucxa3.JPG"/>
-  </div>
+<section class="gallery reveal">
+  <img src="https://files.catbox.moe/8ucxa3.JPG"/>
+  <img src="https://files.catbox.moe/8ucxa3.JPG"/>
+  <img src="https://files.catbox.moe/8ucxa3.JPG"/>
 </section>
 
 <!-- RSVP -->
-<section class="section card fade">
+<section class="card reveal">
   <h2>RSVP</h2>
-  <p>Please confirm your attendance</p>
-
-  <a class="btn"
-     href="https://forms.google.com"
-     target="_blank">
+  <a class="btn" href="https://forms.google.com">
     I will attend
   </a>
 </section>
 
-<footer class="fade">
-  <p>Thank you for being part of our story</p>
-  <p>PING ＆ YUCHI</p>
+<footer class="reveal">
+  Thank you for being part of our story
 </footer>
 
 <script src="script.js"></script>

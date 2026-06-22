@@ -1,37 +1,46 @@
-const faders = document.querySelectorAll(".fade");
+const reveals = document.querySelectorAll(".reveal");
+const bgm = document.getElementById("bgm");
+const btn = document.getElementById("musicBtn");
+const opening = document.getElementById("opening");
 
-/* ✨ 2. Scroll fade-in */
+/* 🎬 scroll reveal */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("show");
   });
 });
 
-faders.forEach(el => observer.observe(el));
+reveals.forEach(r => observer.observe(r));
 
-/* 🎵 1. 音樂控制 */
-const bgm = document.getElementById("bgm");
-const btn = document.getElementById("musicBtn");
+/* 🎵 autoplay */
+window.addEventListener("load", () => {
+  bgm.play().catch(() => {
+    bgm.muted = true;
+    bgm.play();
+  });
+});
 
-let playing = false;
+/* 🎧 toggle */
+let playing = true;
 
 btn.addEventListener("click", () => {
-  if (!playing) {
-    bgm.play();
-    btn.textContent = "🔊 Music";
-  } else {
+  if (playing) {
     bgm.pause();
-    btn.textContent = "🔈 Music";
+    btn.style.opacity = 0.4;
+  } else {
+    bgm.play();
+    btn.style.opacity = 1;
   }
   playing = !playing;
 });
 
-/* 🌫️ 3. 微視差（parallax enhance） */
-window.addEventListener("scroll", () => {
-  const scrolled = window.scrollY;
+/* 🎬 close opening */
+setTimeout(() => {
+  opening.style.display = "none";
+}, 3200);
 
+/* 🌫 subtle cinematic parallax */
+window.addEventListener("scroll", () => {
   document.querySelector(".hero").style.backgroundPositionY =
-    scrolled * 0.5 + "px";
+    window.scrollY * 0.4 + "px";
 });
